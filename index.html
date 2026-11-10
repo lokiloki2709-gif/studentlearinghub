@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Learning Hub</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4f7ff;
+    color: #222;
+}
+
+/* Navigation */
+
+nav {
+    background: #171c3b;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav h2 {
+    color: #62d5ff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #62d5ff;
+}
+
+/* Hero */
+
+.hero {
+    min-height: 450px;
+    background: linear-gradient(135deg, #171c3b, #3949ab);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    background: #62d5ff;
+    color: #171c3b;
+    padding: 13px 28px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Common Sections */
+
+section {
+    padding: 65px 8%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    color: #171c3b;
+    margin-bottom: 30px;
+}
+
+/* About */
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Courses */
+
+.course-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.course-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #00000012;
+    transition: 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-8px);
+}
+
+.course-card h3 {
+    color: #3949ab;
+    margin-bottom: 15px;
+}
+
+.course-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Skills */
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill {
+    background: #171c3b;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 25px;
+}
+
+/* Contact */
+
+.contact {
+    background: #e8edff;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    margin: 10px auto;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.contact button {
+    margin-top: 15px;
+}
+
+/* Footer */
+
+footer {
+    background: #171c3b;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Mobile */
+
+@media(max-width: 650px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<nav>
+
+    <h2>LearnHub</h2>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+</nav>
+
+<!-- Home -->
+
+<div class="hero" id="home">
+
+    <h1>Welcome to Student Learning Hub</h1>
+
+    <p>Learn New Skills. Build Your Future.</p>
+
+    <a href="#courses" class="btn">Explore Courses</a>
+
+</div>
+
+<!-- About -->
+
+<section class="about" id="about">
+
+    <h2 class="section-title">About Us</h2>
+
+    <p>
+        Student Learning Hub is a simple online learning platform
+        designed for students who want to improve their knowledge
+        and technical skills. Learn programming, web development,
+        and other useful technologies.
+    </p>
+
+</section>
+
+<!-- Courses -->
+
+<section id="courses">
+
+    <h2 class="section-title">Our Courses</h2>
+
+    <div class="course-container">
+
+        <div class="course-card">
+            <h3>HTML</h3>
+            <p>Learn how to create the structure of websites.</p>
+        </div>
+
+        <div class="course-card">
+            <h3>CSS</h3>
+            <p>Learn website styling, layouts and animations.</p>
+        </div>
+
+        <div class="course-card">
+            <h3>JavaScript</h3>
+            <p>Make your website interactive and dynamic.</p>
+        </div>
+
+        <div class="course-card">
+            <h3>Python</h3>
+            <p>Start programming with Python basics.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Skills -->
+
+<section id="skills">
+
+    <h2 class="section-title">Technologies We Learn</h2>
+
+    <div class="skills-container">
+
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Python</div>
+        <div class="skill">Java</div>
+        <div class="skill">SQL</div>
+
+    </div>
+
+</section>
+
+<!-- Contact -->
+
+<section class="contact" id="contact">
+
+    <h2 class="section-title">Contact Us</h2>
+
+    <form id="contactForm">
+
+        <input type="text" id="name"
+        placeholder="Enter Your Name" required>
+
+        <input type="email" id="email"
+        placeholder="Enter Your Email" required>
+
+        <textarea id="message"
+        rows="5" placeholder="Your Message" required></textarea>
+
+        <button type="submit" class="btn">
+            Send Message
+        </button>
+
+    </form>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+    <p>© 2026 Student Learning Hub | All Rights Reserved</p>
+
+</footer>
+
+<script>
+
+document.getElementById("contactForm").addEventListener("submit",
+function(event) {
+
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+
+    alert("Thank you " + name + "! Your message was received in this demo.");
+
+    document.getElementById("contactForm").reset();
+
+});
+
+</script>
+
+</body>
+</html>
